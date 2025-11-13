@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ijse.clientchatgroup.controller.ServerController">
+    <children>
+        <VBox layoutX="14.0" layoutY="14.0" prefHeight="572.0" prefWidth="372.0" spacing="10.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="372.0" spacing="10.0">
+                    <children>
+                        <VBox prefWidth="300.0" spacing="5.0">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                    <children>
+                                        <Label text="Group Chat Server" textFill="#702b9a">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Button onAction="#DisconnectionBtnOnAction" prefHeight="28.0" prefWidth="111.0" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-weight: bold;" text="Disconnection" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <ScrollPane fx:id="scrollPane" prefHeight="392.0" prefWidth="372.0" vbarPolicy="ALWAYS">
+                    <content>
+                        <VBox fx:id="chatDisplay" spacing="10.0" />
+                    </content>
+                </ScrollPane>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="372.0" spacing="10.0">
+                    <children>
+                        <TextField fx:id="msgInput" prefHeight="41.0" prefWidth="246.0" promptText="Type your message here..." />
+                    </children>
+                </HBox>
+            <Button fx:id="sendBtn" mnemonicParsing="false" style="-fx-background-color: black;" text="Send" textFill="#f5f0f0" />
+                    <Label fx:id="clientCountLabel" prefHeight="39.0" prefWidth="102.0" text="Connected Users: 0" textFill="#666666" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
